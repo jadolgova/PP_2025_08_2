@@ -4,7 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e358e37-a609-4540-8eb5-fd8eccc9c2fd" name="Changes" comment="17.12.2025" />
+    <list default="true" id="9e358e37-a609-4540-8eb5-fd8eccc9c2fd" name="Changes" comment="17.12.2025">
+      <change afterPath="$PROJECT_DIR$/src/images/6.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/7.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/8.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/фон3.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/фон4.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/фон5.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/фон6.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_button-new.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_button-new.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_button-new.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_button-new.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/main.scss" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,27 +57,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Юлия/WebstormProjects/PP_2025_08_2&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.scopes&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Юлия/WebstormProjects/PP_2025_08_2/src/images",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "project.scopes",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Юлия\WebstormProjects\PP_2025_08_2\src\images" />
+      <recent name="C:\Users\Юлия\WebstormProjects\PP_2025_08_2\src\components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Юлия\WebstormProjects\PP_2025_08_2\src\images" />
       <recent name="C:\Users\Юлия\WebstormProjects\PP_2025_08_2\src\assets\fonts" />
     </key>
   </component>
@@ -87,7 +103,7 @@
       <workItem from="1765977229270" duration="12649000" />
       <workItem from="1765990516693" duration="104000" />
       <workItem from="1765990732485" duration="1166000" />
-      <workItem from="1766004058245" duration="858000" />
+      <workItem from="1766004058245" duration="3940000" />
     </task>
     <task id="LOCAL-00001" summary="16.12.2025">
       <option name="closed" value="true" />
@@ -145,7 +161,23 @@
       <option name="project" value="LOCAL" />
       <updated>1766004641040</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="17.12.2025">
+      <option name="closed" value="true" />
+      <created>1766005088961</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1766005088961</updated>
+    </task>
+    <task id="LOCAL-00009" summary="17.12.2025">
+      <option name="closed" value="true" />
+      <created>1766005329726</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1766005329727</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

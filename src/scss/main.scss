@@ -11,8 +11,138 @@
 
 // ==== 4. Components ====
 @use 'components/button';
+@use 'components/button-two';
+@use 'components/button-new';
 @use 'components/card';
+@use 'components/header';
+@use 'components/card-employment';
+
+@font-face {
+  font-family: 'Bahnschrift';
+  src: url('dist/assets/fonts/Bahnschrift.ttf');
+}
 
 body {
   background-color: var(--main-color);
+  font-family: 'Bahnschrift';
+  margin: 0;
+  padding: 0;
+  // Контейнер с адаптацией
+  .container {
+    padding: 30px 160px 0 160px;
+
+    @media (max-width: 1200px) {
+      padding: 30px 80px 0 80px;
+    }
+
+    @media (max-width: 768px) {
+      padding: 20px 40px 0 40px;
+    }
+
+    @media (max-width: 480px) {
+      padding: 15px 20px 0 20px;
+    }
+  }
+
+  // Заголовки с адаптацией
+  h1 {
+    font-weight: bold;
+    font-size: 36px;
+
+    @media (max-width: 1024px) {
+      font-size: 32px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 28px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 24px;
+    }
+  }
+
+  h2 {
+    font-size: 28px;
+    text-align: center;
+
+    @media (max-width: 1024px) {
+      font-size: 24px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 22px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 20px;
+    }
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: normal;
+    color: gray;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 14px;
+    }
+  }
+  .banner{
+    margin-top: 30px;
+    background-image: url('../images/фон1.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding: 130px 160px;
+    h3{
+      margin-top: 10px;
+    }
+    .btn-bannner{
+      margin-top: 80px;
+      display: flex;
+      gap: 30px;
+    }
+  }
+  .info-block{
+    background-color: white;
+    border-radius: 20px;
+    text-align: center;
+    padding: 50px;
+    .text{
+      font-size: 16px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    & > * {
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    @media (max-width: 650px) {
+      .text {
+        font-size: 14px;
+      }
+    }
+  }
+  .cards{
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+  }
+  .btn-two{
+    display: flex;
+    justify-content: center;
+  }
 }

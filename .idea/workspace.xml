@@ -5,48 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9e358e37-a609-4540-8eb5-fd8eccc9c2fd" name="Changes" comment="18.12.2025">
-      <change afterPath="$PROJECT_DIR$/dist/assets/images/2-lg.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/assets/images/2-sm.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/assets/images/2.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/assets/images/3-lg.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/assets/images/3-sm.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/assets/images/3.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/assets/images/4-lg.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/assets/images/4-sm.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/assets/images/4.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/assets/images/5-lg.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/assets/images/5-sm.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/assets/images/5.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/assets/images/66-lg.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/assets/images/66-sm.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/assets/images/66.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/assets/images/77-lg.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/assets/images/77-sm.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/assets/images/77.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/assets/images/88-lg.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/assets/images/88-sm.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/assets/images/88.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/assets/images/Совет обуч 18 ноября 1-lg.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/assets/images/Совет обуч 18 ноября 1-sm.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/assets/images/Совет обуч 18 ноября 1.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/events.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/_card-events.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/2.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/3.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/4.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/5.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/66.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/77.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/88.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/Совет обуч 18 ноября 1.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/events.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/components/_card-events.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/components/dark-theme.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/events.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/_header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_button-new.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_button-new.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_button-two.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_button-two.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_card-employment.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_card-employment.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_card-events.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_card-events.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_header.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/main.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/main.scss" afterDir="false" />
@@ -135,7 +104,7 @@
       <workItem from="1765977229270" duration="12649000" />
       <workItem from="1765990516693" duration="104000" />
       <workItem from="1765990732485" duration="1166000" />
-      <workItem from="1766004058245" duration="10477000" />
+      <workItem from="1766004058245" duration="11873000" />
     </task>
     <task id="LOCAL-00001" summary="16.12.2025">
       <option name="closed" value="true" />
@@ -241,7 +210,23 @@
       <option name="project" value="LOCAL" />
       <updated>1766008593133</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="18.12.2025">
+      <option name="closed" value="true" />
+      <created>1766059731949</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1766059731949</updated>
+    </task>
+    <task id="LOCAL-00015" summary="18.12.2025">
+      <option name="closed" value="true" />
+      <created>1766059891325</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1766059891325</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

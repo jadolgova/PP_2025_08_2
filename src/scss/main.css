@@ -535,8 +535,12 @@ body .banner .btn-bannner {
   body .banner {
     padding: 70px 80px;
     width: 100%;
-    background: none;
+    background-image: url("../images/f1.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     text-align: center;
+    margin: 0;
   }
   body .banner .btn-bannner {
     flex-wrap: wrap;

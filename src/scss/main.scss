@@ -16,6 +16,7 @@
 @use 'components/card';
 @use 'components/header';
 @use 'components/card-employment';
+@use 'components/card-events';
 
 @font-face {
   font-family: 'Bahnschrift';
@@ -167,5 +168,52 @@ body {
   .btn-two{
     display: flex;
     justify-content: center;
+  }
+  .cards-event{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  .slider {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+
+    .slider-track {
+      display: flex;
+      height: 100%;
+      width: 200%;
+      animation: slide 20s linear infinite;
+
+      img {
+        width: 12.5%;
+        height: 100%;
+        object-fit: cover;
+        flex-shrink: 0;
+      }
+    }
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .slider {
+      height: 90px;
+    }
+  }
+
+  @media (max-width: 450px) {
+    .slider {
+      height: 60px;
+    }
   }
 }

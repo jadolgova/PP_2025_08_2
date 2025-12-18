@@ -343,23 +343,26 @@ body.menu-open {
 
 @media (max-width: 450px) {
   .card-events {
-    width: 170px;
-    height: 280px;
-    padding: 15px;
-    gap: 10px;
-    border-radius: 15px;
+    width: calc(50vw - 45px);
+    height: calc((50vw - 45px) * 1.65);
+    min-height: 0;
+    padding: 12px;
+    gap: 8px;
+    border-radius: 12px;
   }
   .card-events .title-ev {
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.2;
   }
   .card-events .btn-event {
-    width: 140px;
-    height: 32px;
-    font-size: 13px;
+    width: calc(100% - 20px);
+    height: 30px;
+    font-size: 12px;
+    max-width: 140px;
   }
   .card-events .img img {
-    max-height: 100px;
+    max-height: calc((50vw - 45px) * 0.65);
+    width: auto;
   }
   .card-events .day {
     font-size: 10px;
@@ -368,40 +371,34 @@ body.menu-open {
 }
 @media (max-width: 400px) {
   .card-events {
-    width: 160px;
-    height: 270px;
-    padding: 12px;
-    gap: 8px;
+    width: calc(50vw - 40px);
+    height: calc((50vw - 40px) * 1.65);
   }
   .card-events .title-ev {
-    font-size: 13px;
-  }
-  .card-events .btn-event {
-    width: 130px;
-    height: 30px;
     font-size: 12px;
   }
+  .card-events .btn-event {
+    font-size: 11px;
+    height: 28px;
+  }
   .card-events .img img {
-    max-height: 90px;
+    max-height: calc((50vw - 40px) * 0.65);
   }
 }
 @media (max-width: 350px) {
   .card-events {
-    width: 150px;
-    height: 260px;
-    padding: 10px;
-    gap: 8px;
+    width: calc(50vw - 35px);
+    height: calc((50vw - 35px) * 1.65);
   }
   .card-events .title-ev {
-    font-size: 12px;
-  }
-  .card-events .btn-event {
-    width: 120px;
-    height: 28px;
     font-size: 11px;
   }
+  .card-events .btn-event {
+    font-size: 10px;
+    height: 26px;
+  }
   .card-events .img img {
-    max-height: 85px;
+    max-height: calc((50vw - 35px) * 0.65);
   }
   .card-events .day {
     font-size: 9px;

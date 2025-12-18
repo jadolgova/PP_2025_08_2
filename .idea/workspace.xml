@@ -4,7 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e358e37-a609-4540-8eb5-fd8eccc9c2fd" name="Changes" comment="18.12.2025" />
+    <list default="true" id="9e358e37-a609-4540-8eb5-fd8eccc9c2fd" name="Changes" comment="18.12.2025">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/Group 4 (5)-lg.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/Group 4 (5)-sm.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/images/Group 4 (5).webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/events.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/events.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_card-employment.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_card-employment.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_card-events.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_card-events.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/main.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/main.scss" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,6 +73,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "project.scopes",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2024.3.5\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -89,7 +107,7 @@
       <workItem from="1765977229270" duration="12649000" />
       <workItem from="1765990516693" duration="104000" />
       <workItem from="1765990732485" duration="1166000" />
-      <workItem from="1766004058245" duration="13572000" />
+      <workItem from="1766004058245" duration="23077000" />
     </task>
     <task id="LOCAL-00001" summary="16.12.2025">
       <option name="closed" value="true" />
@@ -235,7 +253,23 @@
       <option name="project" value="LOCAL" />
       <updated>1766062972637</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="18.12.2025">
+      <option name="closed" value="true" />
+      <created>1766063553150</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1766063553150</updated>
+    </task>
+    <task id="LOCAL-00020" summary="18.12.2025">
+      <option name="closed" value="true" />
+      <created>1766063569410</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1766063569410</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

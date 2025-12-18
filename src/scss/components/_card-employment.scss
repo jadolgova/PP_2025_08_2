@@ -23,6 +23,7 @@
     align-self: center;
   }
 
+
   .text{
     font-size: 16px;
     text-align: center;
@@ -48,4 +49,26 @@
       height: 40px;
     }
   }
+}
+/* Карточка занятости (card-employment) */
+body.dark-theme .card-employment {
+  //background-color: #1e1e1e !important;
+  border: 1px solid #333 !important;
+}
+
+body.dark-theme .card-employment .title {
+  color: #ffffff !important;
+}
+
+body.dark-theme .card-employment .text {
+  color: #ffffff !important;
+}
+
+/* SVG иконки внутри карточки занятости */
+body.dark-theme .card-employment svg path {
+  fill: #ffffff !important;
+}
+
+body.dark-theme .card-employment svg rect {
+  fill: #ffffff !important;
 }

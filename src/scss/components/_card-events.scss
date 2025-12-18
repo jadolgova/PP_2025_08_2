@@ -150,3 +150,91 @@
     padding: 2px 10px;
   }
 }
+/* Карточка событий (card-events) */
+body.dark-theme .card-events {
+  background-color: #1e1e1e !important;
+  border: 1px solid #333 !important;
+}
+
+body.dark-theme .card-events .title-ev {
+  color: #ffffff !important;
+}
+
+/* Дата в карточке событий */
+body.dark-theme .card-events .day {
+  color: #ffffff !important;
+  //background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Кнопка в карточке событий */
+body.dark-theme .card-events .btn-event {
+  background-color: transparent !important;
+  border: 1px solid #ffffff !important;
+  color: #ffffff !important;
+}
+
+body.dark-theme .card-events .btn-event:hover {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+
+/* Изображения в карточках событий - добавляем темный оверлей */
+body.dark-theme .card-events .img img {
+  filter: brightness(0.8) contrast(1.2);
+}
+
+/* Медиа-запросы для темной темы */
+@media (max-width: 650px) {
+  body.dark-theme .card-employment {
+    background-color: #1e1e1e !important;
+  }
+
+  body.dark-theme .card-employment .title {
+    color: #ffffff !important;
+  }
+
+  body.dark-theme .card-employment .text {
+    color: #ffffff !important;
+  }
+}
+
+@media (max-width: 450px) {
+  body.dark-theme .card-events {
+    background-color: #1e1e1e !important;
+  }
+
+  body.dark-theme .card-events .title-ev {
+    color: #ffffff !important;
+  }
+
+  body.dark-theme .card-events .btn-event {
+    background-color: transparent !important;
+    border: 1px solid #ffffff !important;
+    color: #ffffff !important;
+  }
+}
+
+@media (max-width: 400px) {
+  body.dark-theme .card-events {
+    background-color: #1e1e1e !important;
+  }
+}
+
+@media (max-width: 360px) {
+  body.dark-theme .card-events {
+    background-color: #1e1e1e !important;
+  }
+}
+
+/* Дополнительные улучшения для темной темы */
+body.dark-theme .cards .card-employment,
+body.dark-theme .cards .card-events {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+}
+
+body.dark-theme .card-employment:hover,
+body.dark-theme .card-events:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4) !important;
+  transform: translateY(-5px) !important;
+}

@@ -70,6 +70,55 @@
   </div>
 </div>
 
+<script>
+  // Функция переключения темы
+  function toggleTheme() {
+    const body = document.body;
+    const themeToggle = document.getElementById('theme-toggle');
+
+    // Переключаем тему
+    if (body.classList.contains('dark-theme')) {
+      body.classList.remove('dark-theme');
+      // ЧЕРНАЯ луна для светлой темы
+      themeToggle.innerHTML = '<span style="display:inline-block; transform:scale(1.2);">🌙</span>';
+      themeToggle.title = "Включить темную тему";
+      localStorage.setItem('theme', 'light');
+    } else {
+      body.classList.add('dark-theme');
+      // БЕЛОЕ солнце для темной темы
+      themeToggle.innerHTML = '<span style="display:inline-block; transform:scale(1.2); color:#ffffff;">☀️</span>';
+      themeToggle.title = "Включить светлую тему";
+      localStorage.setItem('theme', 'dark');
+    }
+  }
+
+  // При загрузке страницы
+  document.addEventListener('DOMContentLoaded', function() {
+    const savedTheme = localStorage.getItem('theme');
+    const themeToggle = document.getElementById('theme-toggle');
+
+    if (savedTheme === 'dark') {
+      document.body.classList.add('dark-theme');
+      if (themeToggle) {
+        themeToggle.innerHTML = '<span style="display:inline-block; transform:scale(1.2); color:#ffffff;">☀️</span>';
+        themeToggle.title = "Включить светлую тему";
+      }
+    } else {
+      if (themeToggle) {
+        themeToggle.innerHTML = '<span style="display:inline-block; transform:scale(1.2);">🌙</span>';
+        themeToggle.title = "Включить темную тему";
+      }
+    }
+
+    // Вешаем обработчик на кнопку
+    if (themeToggle) {
+      themeToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        toggleTheme();
+      });
+    }
+  });
+</script>
 
 </body>
 </html>

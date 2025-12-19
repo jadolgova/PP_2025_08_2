@@ -19,14 +19,14 @@
 @use 'components/card-events';
 @use 'components/footer';
 
-@font-face {
-  font-family: 'Bahnschrift';
-  src: url('dist/assets/fonts/Bahnschrift.ttf');
-}
+//@font-face {
+//  font-family: 'Bahnschrift';
+//  src: url('dist/assets/fonts/Bahnschrift.ttf');
+//}
 
 body {
   background-color: #f1ecec;
-  font-family: 'Bahnschrift';
+  font-family: Bahnschrift;
   margin: 0;
   padding: 0;
   // Контейнер с адаптацией

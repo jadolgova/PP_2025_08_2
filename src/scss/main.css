@@ -515,6 +515,30 @@ body.dark-theme .card-employment svg rect {
     padding: 2px 10px;
   }
 }
+@media (max-width: 340px) {
+  .card-events {
+    width: calc(50vw - 35px);
+    aspect-ratio: 1/1.5;
+    padding: 15px;
+    gap: 6px;
+    border-radius: 10px;
+  }
+  .card-events .title-ev {
+    font-size: 11px;
+  }
+  .card-events .btn-event {
+    height: 24px;
+    font-size: 6px;
+    max-width: 90px;
+  }
+  .card-events .img img {
+    max-height: 75px;
+  }
+  .card-events .day {
+    font-size: 6px;
+    padding: 2px 10px;
+  }
+}
 /* Карточка событий (card-events) */
 body.dark-theme .card-events {
   background-color: #1e1e1e !important;
@@ -624,13 +648,9 @@ body.dark-theme .card-events:hover {
     padding: 12px 0;
   }
 }
-@font-face {
-  font-family: "Bahnschrift";
-  src: url("dist/assets/fonts/Bahnschrift.ttf");
-}
 body {
   background-color: #f1ecec;
-  font-family: "Bahnschrift";
+  font-family: Bahnschrift;
   margin: 0;
   padding: 0;
 }

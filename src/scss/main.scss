@@ -301,7 +301,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     @media (max-width: 650px) {
-      gap: 2rem;
+      gap: 20px;
     }
   }
   .btn-two{
@@ -314,7 +314,7 @@ body {
     flex-wrap: wrap;
     gap: 2rem;
     @media (max-width: 450px) {
-      gap: 1rem;
+      gap: 20px;
     }
   }
   .slider {

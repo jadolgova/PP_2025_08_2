@@ -72,46 +72,7 @@ body.menu-open {
   display: flex;
   align-items: center;
   height: 100%;
-}
-.header .burger {
-  display: none;
-  width: 24px;
-  height: 18px;
-  position: relative;
-  z-index: 1000;
-  cursor: pointer;
-}
-.header .burger span {
-  display: block;
-  position: absolute;
-  height: 2px;
-  width: 100%;
-  background: #333;
-  border-radius: 1px;
-  transition: 0.3s;
-}
-.header .burger span:nth-child(1) {
-  top: 0;
-}
-.header .burger span:nth-child(2) {
-  top: 8px;
-}
-.header .burger span:nth-child(3) {
-  top: 16px;
-}
-.header .burger.active span {
-  background: #fff;
-}
-.header .burger.active span:nth-child(1) {
-  transform: rotate(45deg);
-  top: 8px;
-}
-.header .burger.active span:nth-child(2) {
-  opacity: 0;
-}
-.header .burger.active span:nth-child(3) {
-  transform: rotate(-45deg);
-  top: 8px;
+  order: 1;
 }
 .header .theme-toggle {
   cursor: pointer;
@@ -121,22 +82,21 @@ body.menu-open {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1001;
   margin-left: 30px;
-  text-decoration: none !important;
   order: 3;
+  text-decoration: none !important;
 }
 .header .theme-toggle:hover {
   background-color: rgba(0, 0, 0, 0.05);
+}
+.header .theme-toggle:hover .theme-icon {
+  stroke: #A3195B;
 }
 .header .theme-toggle .theme-icon {
   width: 20px;
   height: 20px;
   stroke: #333;
   transition: stroke 0.3s;
-}
-.header .theme-toggle:hover .theme-icon {
-  stroke: #A3195B;
 }
 .header .nav {
   margin-left: auto;
@@ -173,11 +133,45 @@ body.menu-open {
   background: #A3195B;
   transition: 0.3s;
 }
-.header .logo {
-  order: 1;
-}
 .header .burger {
+  display: none;
+  width: 24px;
+  height: 18px;
+  position: relative;
+  cursor: pointer;
   order: 4;
+}
+.header .burger span {
+  display: block;
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background: #000000;
+  border-radius: 1px;
+  transition: 0.3s;
+}
+.header .burger span:nth-child(1) {
+  top: 0;
+}
+.header .burger span:nth-child(2) {
+  top: 8px;
+}
+.header .burger span:nth-child(3) {
+  top: 16px;
+}
+.header .burger.active span {
+  background: #fff;
+}
+.header .burger.active span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 8px;
+}
+.header .burger.active span:nth-child(2) {
+  opacity: 0;
+}
+.header .burger.active span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 8px;
 }
 
 @media (max-width: 1200px) {
@@ -212,10 +206,6 @@ body.menu-open {
   .header .burger {
     display: block;
   }
-  .header .burger span {
-    height: 1px;
-    background: #a6a6a6;
-  }
   .header .theme-toggle {
     order: 2;
     margin-left: auto;
@@ -225,9 +215,6 @@ body.menu-open {
     top: auto;
     padding: 10px;
     z-index: 1;
-  }
-  .header .theme-toggle .theme-icon {
-    stroke: #333;
   }
   .header .burger {
     order: 3;
@@ -648,9 +635,13 @@ body.dark-theme .card-events:hover {
     padding: 12px 0;
   }
 }
+@font-face {
+  font-family: "Bahnschrift";
+  src: url("dist/assets/fonts/Bahnschrift.ttf");
+}
 body {
   background-color: #f1ecec;
-  font-family: Bahnschrift, sans-serif;
+  font-family: "Bahnschrift", sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -752,12 +743,16 @@ body .banner .btn-bannner {
   body .banner {
     padding: 70px 80px;
     width: 100%;
-    background-image: url("../images/f1.webp");
+    background-image: url("../images/f1.webp") !important;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     text-align: center;
     margin: 0;
+  }
+  body .banner .dark .your-class,
+  body .banner [data-theme=dark] .your-class {
+    background-image: url("../images/f1.webp");
   }
   body .banner .btn-bannner {
     flex-wrap: wrap;
@@ -780,6 +775,7 @@ body .info-block .inf {
   display: flex;
   justify-content: center;
   gap: 30px;
+  align-items: center;
 }
 body .info-block .inf .HB {
   background-color: rgba(102, 36, 131, 0.5);
@@ -800,15 +796,12 @@ body .info-block .text {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease; /* Плавные переходы */
-}
-body .info-block {
-  /* Стили для изображений внутри блока */
+  transition: all 0.3s ease;
 }
 body .info-block img {
   max-width: 100%;
-  height: auto;
-  transition: all 0.3s ease; /* Плавные переходы */
+  height: 100%;
+  transition: all 0.3s ease;
 }
 body .info-block > * {
   margin-bottom: 20px;
@@ -822,6 +815,7 @@ body {
 @media (max-width: 1024px) {
   body .info-block {
     padding: 40px;
+    align-items: center;
   }
   body .info-block .inf {
     gap: 20px;
@@ -843,7 +837,6 @@ body {
 }
 @media (max-width: 768px) {
   body .info-block {
-    padding: 30px;
     border-radius: 15px;
   }
   body .info-block .inf {
@@ -871,7 +864,6 @@ body {
 }
 @media (max-width: 480px) {
   body .info-block {
-    padding: 20px 15px;
     border-radius: 12px;
   }
   body .info-block .inf {
@@ -895,9 +887,6 @@ body {
   /* Адаптация для очень маленьких экранов (360px и меньше) */
 }
 @media (max-width: 360px) {
-  body .info-block {
-    padding: 15px 10px;
-  }
   body .info-block .inf .HB {
     width: 95%;
     font-size: 12px;
@@ -1014,6 +1003,11 @@ body.dark-theme .header {
   border-bottom: 1px solid #333;
 }
 
+/* ЛИНИИ БУРГЕРА В ТЕМНОЙ ТЕМЕ - БЕЛЫЕ */
+body.dark-theme .burger span {
+  background: #ffffff !important;
+}
+
 /* Навигация */
 body.dark-theme .nav ul li a {
   color: #ffffff !important;
@@ -1106,6 +1100,24 @@ body.dark-theme .card-events:hover {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4) !important;
 }
 
+/* ИКОНКА ТЕМЫ В ТЕМНОЙ ТЕМЕ - БЕЛАЯ */
+body.dark-theme .theme-icon {
+  stroke: #ffffff !important;
+}
+
+/* Показываем нужную иконку в зависимости от темы */
+body.dark-theme .theme-icon-moon {
+  display: none;
+}
+
+body.dark-theme .theme-icon-sun {
+  display: block !important;
+}
+
+body:not(.dark-theme) .theme-icon-sun {
+  display: none;
+}
+
 /* Медиа-запросы */
 @media (max-width: 650px) {
   body.dark-theme .card-employment .title,
@@ -1131,19 +1143,6 @@ body.dark-theme .card-events:hover {
 .theme-toggle:hover .theme-icon {
   transform: scale(1.1);
   opacity: 0.8;
-}
-
-/* Показываем нужную иконку в зависимости от темы */
-body.dark-theme .theme-icon-moon {
-  display: none;
-}
-
-body.dark-theme .theme-icon-sun {
-  display: block !important;
-}
-
-body:not(.dark-theme) .theme-icon-sun {
-  display: none;
 }
 
 .modal-overlay {

@@ -26,61 +26,9 @@ body {
     display: flex;
     align-items: center;
     height: 100%;
-    // Логотип
+    order: 1;
   }
 
-  .burger {
-    display: none;
-    width: 24px;
-    height: 18px;
-    position: relative;
-    z-index: 1000;
-    cursor: pointer;
-
-    span {
-      display: block;
-      position: absolute;
-      height: 2px;
-      width: 100%;
-      background: #333;
-      border-radius: 1px;
-      transition: 0.3s;
-
-      &:nth-child(1) {
-        top: 0;
-      }
-
-      &:nth-child(2) {
-        top: 8px;
-      }
-
-      &:nth-child(3) {
-        top: 16px;
-      }
-    }
-
-    &.active {
-      span {
-        background: #fff;
-
-        &:nth-child(1) {
-          transform: rotate(45deg);
-          top: 8px;
-        }
-
-        &:nth-child(2) {
-          opacity: 0;
-        }
-
-        &:nth-child(3) {
-          transform: rotate(-45deg);
-          top: 8px;
-        }
-      }
-    }
-  }
-
-  // Стили для кнопки смены темы на десктопе (после навигации)
   .theme-toggle {
     cursor: pointer;
     padding: 8px;
@@ -89,13 +37,16 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1001;
-    margin-left: 30px; // Отступ между навигацией и кнопкой темы
-    text-decoration: none !important; // Убираем подчеркивание
-    order: 3; // Ставим после навигации
+    margin-left: 30px;
+    order: 3;
+    text-decoration: none !important;
 
     &:hover {
       background-color: rgba(0, 0, 0, 0.05);
+
+      .theme-icon {
+        stroke: #A3195B;
+      }
     }
 
     .theme-icon {
@@ -104,15 +55,11 @@ body {
       stroke: #333;
       transition: stroke 0.3s;
     }
-
-    &:hover .theme-icon {
-      stroke: #A3195B;
-    }
   }
 
   .nav {
     margin-left: auto;
-    order: 2; // Навигация второй после логотипа
+    order: 2;
 
     ul {
       display: flex;
@@ -153,14 +100,55 @@ body {
     }
   }
 
-  // Логотип первый
-  .logo {
-    order: 1;
-  }
-
-  // Бургер последний
   .burger {
+    display: none;
+    width: 24px;
+    height: 18px;
+    position: relative;
+    cursor: pointer;
     order: 4;
+
+    span {
+      display: block;
+      position: absolute;
+      height: 1px;
+      width: 100%;
+      background: #000000;
+      border-radius: 1px;
+      transition: 0.3s;
+
+      &:nth-child(1) {
+        top: 0;
+      }
+
+      &:nth-child(2) {
+        top: 8px;
+      }
+
+      &:nth-child(3) {
+        top: 16px;
+      }
+    }
+
+    &.active {
+      span {
+        background: #fff;
+
+        &:nth-child(1) {
+          transform: rotate(45deg);
+          top: 8px;
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+        }
+
+        &:nth-child(3) {
+          transform: rotate(-45deg);
+          top: 8px;
+        }
+      }
+    }
   }
 }
 
@@ -175,7 +163,7 @@ body {
     }
 
     .theme-toggle {
-      margin-left: 25px; // Уменьшаем отступ на средних экранах
+      margin-left: 25px;
     }
   }
 }
@@ -197,7 +185,7 @@ body {
     }
 
     .theme-toggle {
-      margin-left: 20px; // Уменьшаем отступ на планшетах
+      margin-left: 20px;
     }
   }
 }
@@ -208,37 +196,27 @@ body {
 
     .burger {
       display: block;
-
-      span {
-        height: 1px;
-        background: #a6a6a6;
-      }
     }
 
-    // Переопределяем порядок для мобилки
     .theme-toggle {
-      order: 2; // Кнопка темы второй (после логотипа)
-      margin-left: auto; // Прижимаем кнопку темы к бургеру
-      margin-right: 15px; // Отступ между кнопкой темы и бургером
-      position: static; // Убираем абсолютное позиционирование
+      order: 2;
+      margin-left: auto;
+      margin-right: 15px;
+      position: static;
       transform: none;
       top: auto;
       padding: 10px;
-      z-index: 1; // Уменьшаем z-index чтобы была под меню
-
-      .theme-icon {
-        stroke: #333;
-      }
+      z-index: 1;
     }
 
     .burger {
-      order: 3; // Бургер третий (после кнопки темы)
+      order: 3;
       position: relative;
-      z-index: 1002; // Бургер должен быть над меню
+      z-index: 1002;
     }
 
     .nav {
-      order: 4; // Навигация последняя
+      order: 4;
       position: fixed;
       top: 0;
       left: 0;
@@ -252,7 +230,7 @@ body {
       transform: translateY(-100%);
       opacity: 0;
       transition: 0.4s ease-out;
-      z-index: 1000; // Меню над кнопкой темы
+      z-index: 1000;
       margin-left: 0;
 
       ul {
@@ -284,12 +262,11 @@ body {
         transform: translateY(0);
         opacity: 1;
       }
-    }
 
-    // Скрываем кнопку темы при открытом меню
-    .nav.active ~ .theme-toggle {
-      opacity: 0; // Делаем кнопку невидимой
-      pointer-events: none; // Отключаем клики по кнопке
+      &.active ~ .theme-toggle {
+        opacity: 0;
+        pointer-events: none;
+      }
     }
   }
 }

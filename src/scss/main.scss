@@ -19,14 +19,14 @@
 @use 'components/card-events';
 @use 'components/footer';
 
-//@font-face {
-//  font-family: 'Bahnschrift';
-//  src: url('dist/assets/fonts/Bahnschrift.ttf');
-//}
+@font-face {
+  font-family: 'Bahnschrift';
+  src: url('dist/assets/fonts/Bahnschrift.ttf');
+}
 
 body {
   background-color: #f1ecec;
-  font-family: Bahnschrift, sans-serif;
+  font-family: 'Bahnschrift', sans-serif;
   margin: 0;
   padding: 0;
   // Контейнер с адаптацией
@@ -119,12 +119,16 @@ body {
     @media (max-width: 768px) {
       padding: 70px 80px;
       width: 100%;
-      background-image: url('../images/f1.webp');
+      background-image: url('../images/f1.webp') !important;
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       text-align: center;
       margin: 0;
+      .dark .your-class,
+      [data-theme="dark"] .your-class {
+        background-image: url('../images/f1.webp');
+      }
       .btn-bannner{
         flex-wrap: wrap;
         justify-content: center;
@@ -146,6 +150,7 @@ body {
       display: flex;
       justify-content: center;
       gap: 30px;
+      align-items: center;
 
       .HB {
         background-color: rgba(102, 36, 131, 0.5);
@@ -168,14 +173,13 @@ body {
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: all 0.3s ease; /* Плавные переходы */
+      transition: all 0.3s ease;
     }
 
-    /* Стили для изображений внутри блока */
     img {
       max-width: 100%;
-      height: auto;
-      transition: all 0.3s ease; /* Плавные переходы */
+      height: 100%;
+      transition: all 0.3s ease;
     }
 
     & > * {
@@ -191,6 +195,7 @@ body {
   @media (max-width: 1024px) {
     .info-block {
       padding: 40px;
+      align-items: center;
 
       .inf {
         gap: 20px;
@@ -215,7 +220,6 @@ body {
   /* Адаптация для планшетов (768px и меньше) */
   @media (max-width: 768px) {
     .info-block {
-      padding: 30px;
       border-radius: 15px;
 
       .inf {
@@ -246,7 +250,6 @@ body {
   /* Адаптация для мобильных устройств (480px и меньше) */
   @media (max-width: 480px) {
     .info-block {
-      padding: 20px 15px;
       border-radius: 12px;
 
       .inf {
@@ -274,7 +277,6 @@ body {
   /* Адаптация для очень маленьких экранов (360px и меньше) */
   @media (max-width: 360px) {
     .info-block {
-      padding: 15px 10px;
 
       .inf {
         .HB {
@@ -398,6 +400,11 @@ body.dark-theme .header {
   border-bottom: 1px solid #333;
 }
 
+/* ЛИНИИ БУРГЕРА В ТЕМНОЙ ТЕМЕ - БЕЛЫЕ */
+body.dark-theme .burger span {
+  background: #ffffff !important;
+}
+
 /* Навигация */
 body.dark-theme .nav ul li a {
   color: #ffffff !important;
@@ -490,6 +497,24 @@ body.dark-theme .card-events:hover {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4) !important;
 }
 
+/* ИКОНКА ТЕМЫ В ТЕМНОЙ ТЕМЕ - БЕЛАЯ */
+body.dark-theme .theme-icon {
+  stroke: #ffffff !important;
+}
+
+/* Показываем нужную иконку в зависимости от темы */
+body.dark-theme .theme-icon-moon {
+  display: none;
+}
+
+body.dark-theme .theme-icon-sun {
+  display: block !important;
+}
+
+body:not(.dark-theme) .theme-icon-sun {
+  display: none;
+}
+
 /* Медиа-запросы */
 @media (max-width: 650px) {
   body.dark-theme .card-employment .title,
@@ -509,6 +534,7 @@ body.dark-theme .card-events:hover {
     color: #ffffff !important;
   }
 }
+
 /* Стили для SVG иконок темы */
 .theme-icon {
   transition: transform 0.3s ease, opacity 0.3s ease;
@@ -517,19 +543,6 @@ body.dark-theme .card-events:hover {
 .theme-toggle:hover .theme-icon {
   transform: scale(1.1);
   opacity: 0.8;
-}
-
-/* Показываем нужную иконку в зависимости от темы */
-body.dark-theme .theme-icon-moon {
-  display: none;
-}
-
-body.dark-theme .theme-icon-sun {
-  display: block !important;
-}
-
-body:not(.dark-theme) .theme-icon-sun {
-  display: none;
 }
 // Модальное окно
 .modal-overlay {

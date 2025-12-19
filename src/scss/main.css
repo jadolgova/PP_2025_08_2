@@ -650,7 +650,7 @@ body.dark-theme .card-events:hover {
 }
 body {
   background-color: #f1ecec;
-  font-family: Bahnschrift;
+  font-family: Leelawadee UI;
   margin: 0;
   padding: 0;
 }
@@ -732,7 +732,7 @@ body .banner {
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  padding: 130px 160px;
+  padding: 130px 220px;
 }
 body .banner h3 {
   margin-top: 10px;

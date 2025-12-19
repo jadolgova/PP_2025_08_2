@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9e358e37-a609-4540-8eb5-fd8eccc9c2fd" name="Changes" comment="19.12.2025">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/main.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/main.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +97,7 @@
       <workItem from="1765990516693" duration="104000" />
       <workItem from="1765990732485" duration="1166000" />
       <workItem from="1766004058245" duration="27439000" />
-      <workItem from="1766143141636" duration="7051000" />
+      <workItem from="1766143141636" duration="7400000" />
     </task>
     <task id="LOCAL-00001" summary="16.12.2025">
       <option name="closed" value="true" />
@@ -361,7 +363,23 @@
       <option name="project" value="LOCAL" />
       <updated>1766150552480</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="19.12.2025">
+      <option name="closed" value="true" />
+      <created>1766150614448</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1766150614448</updated>
+    </task>
+    <task id="LOCAL-00035" summary="19.12.2025">
+      <option name="closed" value="true" />
+      <created>1766150667744</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1766150667744</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

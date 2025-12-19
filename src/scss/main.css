@@ -723,7 +723,7 @@ body .banner {
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  padding: 130px 220px;
+  padding: 130px 180px;
 }
 body .banner h3 {
   margin-top: 10px;
@@ -903,8 +903,7 @@ body .cards {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  gap: 5rem; /* вместо 80px используем rem */
-  justify-content: center;
+  justify-content: space-between;
 }
 @media (max-width: 650px) {
   body .cards {

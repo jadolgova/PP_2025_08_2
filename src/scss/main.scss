@@ -17,6 +17,7 @@
 @use 'components/header';
 @use 'components/card-employment';
 @use 'components/card-events';
+@use 'components/footer';
 
 @font-face {
   font-family: 'Bahnschrift';
@@ -693,7 +694,15 @@ body.dark-theme {
       }
     }
   }
+  /* Стили для футера в темной теме */
+  body.dark-theme .footer {
+    border-top-color: #444;
+    color: #ffffff;
+  }
 
+  body.dark-theme .footer p {
+    color: #ffffff;
+  }
   // Дополнительный класс для ручного управления (темная тема)
   .input-group.has-value {
     label {

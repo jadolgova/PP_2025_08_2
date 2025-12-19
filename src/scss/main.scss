@@ -135,7 +135,7 @@ body {
       width: 100%;
     }
   }
-  .info-block{
+  .info-block {
     background-color: white;
     border-radius: 20px;
     text-align: center;
@@ -145,7 +145,8 @@ body {
       display: flex;
       justify-content: center;
       gap: 30px;
-      .HB{
+
+      .HB {
         background-color: rgba(102, 36, 131, 0.5);
         color: #662483;
         border-radius: 20px;
@@ -154,40 +155,28 @@ body {
         text-align: center;
         display: flex;
         justify-content: center;
-        margin: 0 auto; /* Центрирование по горизонтали */
+        margin: 0 auto;
+        font-size: 16px; /* Добавим базовый размер шрифта */
+        transition: all 0.3s ease; /* Плавные переходы */
       }
     }
 
-    /* Адаптация для планшетов */
-    @media (max-width: 1024px) {
-      .inf {
-        gap: 20px;
-        flex-wrap: wrap; /* Разрешаем перенос элементов */
-      }
-    }
-
-    /* Адаптация для мобильных устройств */
-    @media (max-width: 768px) {
-      .inf {
-        flex-direction: column; /* Элементы становятся в колонку */
-        align-items: center; /* Центрируем элементы */
-        gap: 15px;
-      }
-    }
-
-    /* Адаптация для очень маленьких экранов */
-    @media (max-width: 480px) {
-      .inf {
-        gap: 10px;
-      }
-    }
-    .text{
+    .text {
       font-size: 16px;
       text-align: center;
       display: flex;
       align-items: center;
       justify-content: center;
+      transition: all 0.3s ease; /* Плавные переходы */
     }
+
+    /* Стили для изображений внутри блока */
+    img {
+      max-width: 100%;
+      height: auto;
+      transition: all 0.3s ease; /* Плавные переходы */
+    }
+
     & > * {
       margin-bottom: 20px;
 
@@ -195,9 +184,111 @@ body {
         margin-bottom: 0;
       }
     }
-    @media (max-width: 650px) {
+  }
+
+  /* Адаптация для планшетов (1024px и меньше) */
+  @media (max-width: 1024px) {
+    .info-block {
+      padding: 40px;
+
+      .inf {
+        gap: 20px;
+        flex-wrap: wrap;
+
+        .HB {
+          width: 450px;
+          font-size: 15px;
+        }
+      }
+
+      .text {
+        font-size: 15px;
+      }
+
+      img {
+        max-height: 200px;
+      }
+    }
+  }
+
+  /* Адаптация для планшетов (768px и меньше) */
+  @media (max-width: 768px) {
+    .info-block {
+      padding: 30px;
+      border-radius: 15px;
+
+      .inf {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+
+        .HB {
+          width: 80%;
+          max-width: 400px;
+          font-size: 14px;
+          padding: 6px 10px;
+          border-radius: 15px;
+        }
+      }
+
       .text {
         font-size: 14px;
+        line-height: 1.4;
+      }
+
+      img {
+        max-height: 180px;
+      }
+    }
+  }
+
+  /* Адаптация для мобильных устройств (480px и меньше) */
+  @media (max-width: 480px) {
+    .info-block {
+      padding: 20px 15px;
+      border-radius: 12px;
+
+      .inf {
+        gap: 12px;
+
+        .HB {
+          width: 90%;
+          font-size: 13px;
+          padding: 5px 8px;
+          border-radius: 12px;
+        }
+      }
+
+      .text {
+        font-size: 13px;
+        line-height: 1.5;
+      }
+
+      img {
+        max-height: 150px; /* Высота фото до 150px как вы просили */
+      }
+    }
+  }
+
+  /* Адаптация для очень маленьких экранов (360px и меньше) */
+  @media (max-width: 360px) {
+    .info-block {
+      padding: 15px 10px;
+
+      .inf {
+        .HB {
+          width: 95%;
+          font-size: 12px;
+          padding: 4px 6px;
+        }
+      }
+
+      .text {
+        font-size: 12px;
+      }
+
+      img {
+        max-height: 130px;
       }
     }
   }

@@ -790,34 +790,9 @@ body .info-block .inf .HB {
   text-align: center;
   display: flex;
   justify-content: center;
-  margin: 0 auto; /* Центрирование по горизонтали */
-}
-body .info-block {
-  /* Адаптация для планшетов */
-}
-@media (max-width: 1024px) {
-  body .info-block .inf {
-    gap: 20px;
-    flex-wrap: wrap; /* Разрешаем перенос элементов */
-  }
-}
-body .info-block {
-  /* Адаптация для мобильных устройств */
-}
-@media (max-width: 768px) {
-  body .info-block .inf {
-    flex-direction: column; /* Элементы становятся в колонку */
-    align-items: center; /* Центрируем элементы */
-    gap: 15px;
-  }
-}
-body .info-block {
-  /* Адаптация для очень маленьких экранов */
-}
-@media (max-width: 480px) {
-  body .info-block .inf {
-    gap: 10px;
-  }
+  margin: 0 auto;
+  font-size: 16px; /* Добавим базовый размер шрифта */
+  transition: all 0.3s ease; /* Плавные переходы */
 }
 body .info-block .text {
   font-size: 16px;
@@ -825,6 +800,15 @@ body .info-block .text {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s ease; /* Плавные переходы */
+}
+body .info-block {
+  /* Стили для изображений внутри блока */
+}
+body .info-block img {
+  max-width: 100%;
+  height: auto;
+  transition: all 0.3s ease; /* Плавные переходы */
 }
 body .info-block > * {
   margin-bottom: 20px;
@@ -832,9 +816,98 @@ body .info-block > * {
 body .info-block > *:last-child {
   margin-bottom: 0;
 }
-@media (max-width: 650px) {
+body {
+  /* Адаптация для планшетов (1024px и меньше) */
+}
+@media (max-width: 1024px) {
+  body .info-block {
+    padding: 40px;
+  }
+  body .info-block .inf {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  body .info-block .inf .HB {
+    width: 450px;
+    font-size: 15px;
+  }
+  body .info-block .text {
+    font-size: 15px;
+  }
+  body .info-block img {
+    max-height: 200px;
+  }
+}
+body {
+  /* Адаптация для планшетов (768px и меньше) */
+}
+@media (max-width: 768px) {
+  body .info-block {
+    padding: 30px;
+    border-radius: 15px;
+  }
+  body .info-block .inf {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  body .info-block .inf .HB {
+    width: 80%;
+    max-width: 400px;
+    font-size: 14px;
+    padding: 6px 10px;
+    border-radius: 15px;
+  }
   body .info-block .text {
     font-size: 14px;
+    line-height: 1.4;
+  }
+  body .info-block img {
+    max-height: 180px;
+  }
+}
+body {
+  /* Адаптация для мобильных устройств (480px и меньше) */
+}
+@media (max-width: 480px) {
+  body .info-block {
+    padding: 20px 15px;
+    border-radius: 12px;
+  }
+  body .info-block .inf {
+    gap: 12px;
+  }
+  body .info-block .inf .HB {
+    width: 90%;
+    font-size: 13px;
+    padding: 5px 8px;
+    border-radius: 12px;
+  }
+  body .info-block .text {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  body .info-block img {
+    max-height: 150px; /* Высота фото до 150px как вы просили */
+  }
+}
+body {
+  /* Адаптация для очень маленьких экранов (360px и меньше) */
+}
+@media (max-width: 360px) {
+  body .info-block {
+    padding: 15px 10px;
+  }
+  body .info-block .inf .HB {
+    width: 95%;
+    font-size: 12px;
+    padding: 4px 6px;
+  }
+  body .info-block .text {
+    font-size: 12px;
+  }
+  body .info-block img {
+    max-height: 130px;
   }
 }
 body .cards {

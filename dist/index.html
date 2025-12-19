@@ -227,5 +227,153 @@
         }
     });
 </script>
+<div class="modal-overlay" id="register-modal">
+    <div class="modal">
+        <div class="modal-header">
+            <h2>Регистрация</h2>
+            <button class="modal-close">&times;</button>
+        </div>
+
+        <form class="registration-form">
+            <div class="input-group">
+                <input type="text" id="firstName" required>
+                <label for="firstName">Имя</label>
+            </div>
+
+            <div class="input-group">
+                <input type="text" id="lastName" required>
+                <label for="lastName">Фамилия</label>
+            </div>
+
+            <div class="input-group">
+                <input type="text" id="middleName">
+                <label for="middleName">Отчество</label>
+            </div>
+
+            <div class="input-group">
+                <select id="role" required>
+                    <option value="" disabled="disabled" selected="selected">Выберите роль</option>
+                    <option value="student">Ученик</option>
+                    <option value="teacher">Учитель</option>
+                </select>
+                <label for="role">Роль</label>
+            </div>
+
+            <div class="input-group">
+                <input type="date" id="birthDate" required>
+                <label for="birthDate">Дата рождения</label>
+            </div>
+
+            <div class="input-group">
+                <input type="email" id="email" required>
+                <label for="email">Email</label>
+            </div>
+
+            <button type="submit" class="submit-btn">Зарегистрироваться</button>
+
+            <p class="login-link">Уже есть аккаунт? <a href="#">Войти</a></p>
+        </form>
+    </div>
+</div>
+<script>
+    // Открытие модального окна при клике на "Профиль"
+    document.querySelectorAll('.nav a[href="#"]').forEach(link => {
+        if (link.textContent.trim() === 'Профиль') {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const modal = document.getElementById('register-modal');
+                modal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+
+                // Фокус на первое поле при открытии
+                setTimeout(() => {
+                    document.getElementById('firstName').focus();
+                }, 100);
+            });
+        }
+    });
+
+    // Закрытие модального окна
+    const modal = document.getElementById('register-modal');
+    const closeBtn = document.querySelector('.modal-close');
+
+    closeBtn.addEventListener('click', () => {
+        modal.classList.remove('show');
+        document.body.style.overflow = 'auto';
+    });
+
+    // Закрытие при клике вне модального окна
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        }
+    });
+
+    // Закрытие по Escape
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('show')) {
+            modal.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        }
+    });
+
+    // Обработка отправки формы
+    document.querySelector('.registration-form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        // Здесь можно добавить логику отправки данных
+        alert('Форма отправлена!');
+        modal.classList.remove('show');
+        document.body.style.overflow = 'auto';
+    });
+
+    // Дополнительный JavaScript для лучшей работы select и полей ввода
+    document.addEventListener('DOMContentLoaded', function() {
+        // Обработка select
+        const roleSelect = document.getElementById('role');
+
+        if (roleSelect.value !== '') {
+            roleSelect.parentElement.classList.add('has-value');
+        }
+
+        roleSelect.addEventListener('change', function() {
+            if (this.value !== '') {
+                this.parentElement.classList.add('has-value');
+            } else {
+                this.parentElement.classList.remove('has-value');
+            }
+        });
+
+        // Обработка полей ввода при загрузке
+        document.querySelectorAll('.input-group input').forEach(input => {
+            if (input.value.trim() !== '') {
+                input.parentElement.classList.add('has-value');
+            }
+
+            input.addEventListener('input', function() {
+                if (this.value.trim() !== '') {
+                    this.parentElement.classList.add('has-value');
+                } else {
+                    this.parentElement.classList.remove('has-value');
+                }
+            });
+        });
+
+        // Обработка поля даты
+        const birthDateInput = document.getElementById('birthDate');
+        birthDateInput.addEventListener('change', function() {
+            if (this.value) {
+                this.parentElement.classList.add('has-value');
+            } else {
+                this.parentElement.classList.remove('has-value');
+            }
+        });
+
+        // Фокус на первое поле при открытии (если окно уже открыто)
+        if (modal.classList.contains('show')) {
+            document.getElementById('firstName').focus();
+        }
+    });
+</script>
 </body>
 </html>

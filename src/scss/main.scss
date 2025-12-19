@@ -397,3 +397,465 @@ body.dark-theme .theme-icon-sun {
 body:not(.dark-theme) .theme-icon-sun {
   display: none;
 }
+// Модальное окно
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+
+  &.show {
+    display: flex;
+  }
+
+  .modal {
+    background: white;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 30px 20px;
+      border-bottom: 1px solid #eee;
+
+      h2 {
+        margin: 0;
+        font-size: 24px;
+        font-weight: 600;
+        color: #000000;
+      }
+
+      .modal-close {
+        background: none;
+        border: none;
+        font-size: 30px;
+        cursor: pointer;
+        color: #666;
+        line-height: 1;
+
+        &:hover {
+          color: #333;
+        }
+      }
+    }
+
+    .registration-form {
+      padding: 30px;
+
+      .input-group {
+        position: relative;
+        margin-bottom: 25px;
+
+        input, select {
+          width: 100%;
+          padding: 15px;
+          border: 2px solid #662483;
+          border-radius: 20px;
+          font-size: 16px;
+          background: white;
+          outline: none;
+          transition: border-color 0.3s;
+          color: #000000;
+
+          &:focus {
+            border-color: #8a2be2;
+          }
+
+          &:focus + label,
+          &:not(:placeholder-shown) + label,
+          &:valid + label {
+            transform: translateY(-30px);
+            font-size: 12px;
+            color: #662483;
+            background: white;
+            padding: 0 5px;
+            left: 10px;
+          }
+        }
+
+        select {
+          appearance: none;
+          cursor: pointer;
+
+          &:invalid {
+            color: #999;
+          }
+
+          &:valid {
+            color: #333;
+          }
+
+          &::-ms-expand {
+            display: none;
+          }
+        }
+
+        &:has(select)::after {
+          content: "▼";
+          position: absolute;
+          right: 15px;
+          top: 50%;
+          transform: translateY(-50%);
+          color: #662483;
+          pointer-events: none;
+          font-size: 12px;
+        }
+
+        label {
+          position: absolute;
+          top: 15px;
+          left: 15px;
+          font-size: 16px;
+          color: #666;
+          pointer-events: none;
+          transition: all 0.3s;
+          background: white;
+        }
+
+        input[type="date"] {
+          color: #333;
+          font-family: inherit;
+
+          &::-webkit-calendar-picker-indicator {
+            cursor: pointer;
+            color: #662483;
+          }
+
+          &:valid + label {
+            transform: translateY(-30px);
+            font-size: 12px;
+            color: #662483;
+            background: white;
+            padding: 0 5px;
+            left: 10px;
+          }
+
+          &:focus + label {
+            transform: translateY(-30px);
+            font-size: 12px;
+            color: #662483;
+            background: white;
+            padding: 0 5px;
+            left: 10px;
+          }
+        }
+
+        input[type="date"]:not(:valid):not(:focus) {
+          color: #999;
+        }
+      }
+
+      .submit-btn {
+        width: 100%;
+        padding: 15px;
+        background: #662483;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        font-size: 18px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.3s;
+
+        &:hover {
+          background: #8a2be2;
+        }
+      }
+
+      .login-link {
+        text-align: center;
+        margin-top: 20px;
+        color: #666;
+
+        a {
+          color: #662483;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Стили для темной темы модального окна
+body.dark-theme {
+  .modal-overlay {
+    background: rgba(0, 0, 0, 0.7);
+
+    .modal {
+      background: #1e1e1e;
+      color: #ffffff;
+
+      .modal-header {
+        border-bottom: 1px solid #333;
+
+        h2 {
+          color: #ffffff !important;
+        }
+
+        .modal-close {
+          color: #ffffff;
+
+          &:hover {
+            color: #ccc;
+          }
+        }
+      }
+
+      .registration-form {
+        .input-group {
+          input, select {
+            background: #2d2d2d;
+            border-color: #662483;
+            color: #ffffff;
+
+            &:focus {
+              border-color: #8a2be2;
+            }
+
+            &:focus + label,
+            &:not(:placeholder-shown) + label,
+            &:valid + label {
+              color: #8a2be2;
+              background: #1e1e1e;
+            }
+          }
+
+          select {
+            color: #ffffff;
+
+            &:invalid {
+              color: #999;
+            }
+
+            &:valid {
+              color: #ffffff;
+            }
+          }
+
+          &:has(select)::after {
+            color: #8a2be2;
+          }
+
+          label {
+            color: #999;
+            background: #1e1e1e;
+          }
+
+          input[type="date"] {
+            color: #ffffff;
+
+            &::-webkit-calendar-picker-indicator {
+              filter: invert(1);
+            }
+          }
+
+          input[type="date"]:not(:valid):not(:focus) {
+            color: #999;
+          }
+        }
+
+        .submit-btn {
+          background: #662483;
+          color: white;
+
+          &:hover {
+            background: #8a2be2;
+          }
+        }
+
+        .login-link {
+          color: #999;
+
+          a {
+            color: #8a2be2;
+
+            &:hover {
+              color: #8a2be2;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Дополнительный класс для ручного управления (темная тема)
+  .input-group.has-value {
+    label {
+      color: #8a2be2;
+      background: #1e1e1e;
+    }
+  }
+}
+
+// Адаптивность
+@media (max-width: 768px) {
+  .modal-overlay {
+    .modal {
+      width: 100%;
+      max-width: 450px;
+
+      .modal-header {
+        padding: 20px 20px 15px;
+
+        h2 {
+          font-size: 20px;
+        }
+      }
+
+      .registration-form {
+        padding: 20px;
+
+        .input-group {
+          margin-bottom: 20px;
+
+          input, select {
+            padding: 12px;
+            font-size: 14px;
+          }
+
+          label {
+            top: 12px;
+            left: 12px;
+            font-size: 14px;
+          }
+
+          input:focus + label,
+          input:not(:placeholder-shown) + label,
+          input:valid + label,
+          select:focus + label,
+          select:valid + label {
+            transform: translateY(-25px);
+            font-size: 11px;
+          }
+        }
+
+        .submit-btn {
+          padding: 12px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-overlay {
+    padding: 15px;
+
+    .modal {
+      max-width: 100%;
+      max-height: 85vh;
+
+      .modal-header {
+        padding: 15px;
+
+        h2 {
+          font-size: 18px;
+        }
+      }
+
+      .registration-form {
+        padding: 15px;
+
+        .input-group {
+          margin-bottom: 15px;
+
+          input, select {
+            padding: 10px;
+          }
+
+          label {
+            top: 10px;
+            left: 10px;
+            font-size: 14px;
+          }
+
+          input:focus + label,
+          input:not(:placeholder-shown) + label,
+          input:valid + label,
+          select:focus + label,
+          select:valid + label {
+            transform: translateY(-20px);
+            font-size: 10px;
+            left: 8px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .modal-overlay {
+    padding: 10px;
+
+    .modal {
+      .modal-header {
+        padding: 12px;
+
+        h2 {
+          font-size: 16px;
+        }
+
+        .modal-close {
+          font-size: 24px;
+        }
+      }
+
+      .registration-form {
+        padding: 12px;
+
+        .input-group {
+          margin-bottom: 12px;
+
+          input, select {
+            padding: 8px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Дополнительный класс для ручного управления
+.input-group.has-value {
+  label {
+    transform: translateY(-30px);
+    font-size: 12px;
+    color: #662483;
+    background: white;
+    padding: 0 5px;
+    left: 10px;
+  }
+
+  @media (max-width: 768px) {
+    label {
+      transform: translateY(-25px);
+      font-size: 11px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    label {
+      transform: translateY(-20px);
+      font-size: 10px;
+      left: 8px;
+    }
+  }
+}

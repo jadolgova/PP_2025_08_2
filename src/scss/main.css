@@ -981,4 +981,368 @@ body:not(.dark-theme) .theme-icon-sun {
   display: none;
 }
 
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+.modal-overlay.show {
+  display: flex;
+}
+.modal-overlay .modal {
+  background: white;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+.modal-overlay .modal .modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 30px 20px;
+  border-bottom: 1px solid #eee;
+}
+.modal-overlay .modal .modal-header h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #000000;
+}
+.modal-overlay .modal .modal-header .modal-close {
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #666;
+  line-height: 1;
+}
+.modal-overlay .modal .modal-header .modal-close:hover {
+  color: #333;
+}
+.modal-overlay .modal .registration-form {
+  padding: 30px;
+}
+.modal-overlay .modal .registration-form .input-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+.modal-overlay .modal .registration-form .input-group input, .modal-overlay .modal .registration-form .input-group select {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #662483;
+  border-radius: 20px;
+  font-size: 16px;
+  background: white;
+  outline: none;
+  transition: border-color 0.3s;
+  color: #000000;
+}
+.modal-overlay .modal .registration-form .input-group input:focus, .modal-overlay .modal .registration-form .input-group select:focus {
+  border-color: #8a2be2;
+}
+.modal-overlay .modal .registration-form .input-group input:focus + label, .modal-overlay .modal .registration-form .input-group input:not(:placeholder-shown) + label, .modal-overlay .modal .registration-form .input-group input:valid + label, .modal-overlay .modal .registration-form .input-group select:focus + label, .modal-overlay .modal .registration-form .input-group select:not(:placeholder-shown) + label, .modal-overlay .modal .registration-form .input-group select:valid + label {
+  transform: translateY(-30px);
+  font-size: 12px;
+  color: #662483;
+  background: white;
+  padding: 0 5px;
+  left: 10px;
+}
+.modal-overlay .modal .registration-form .input-group select {
+  appearance: none;
+  cursor: pointer;
+}
+.modal-overlay .modal .registration-form .input-group select:invalid {
+  color: #999;
+}
+.modal-overlay .modal .registration-form .input-group select:valid {
+  color: #333;
+}
+.modal-overlay .modal .registration-form .input-group select::-ms-expand {
+  display: none;
+}
+.modal-overlay .modal .registration-form .input-group:has(select)::after {
+  content: "▼";
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #662483;
+  pointer-events: none;
+  font-size: 12px;
+}
+.modal-overlay .modal .registration-form .input-group label {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 16px;
+  color: #666;
+  pointer-events: none;
+  transition: all 0.3s;
+  background: white;
+}
+.modal-overlay .modal .registration-form .input-group input[type=date] {
+  color: #333;
+  font-family: inherit;
+}
+.modal-overlay .modal .registration-form .input-group input[type=date]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  color: #662483;
+}
+.modal-overlay .modal .registration-form .input-group input[type=date]:valid + label {
+  transform: translateY(-30px);
+  font-size: 12px;
+  color: #662483;
+  background: white;
+  padding: 0 5px;
+  left: 10px;
+}
+.modal-overlay .modal .registration-form .input-group input[type=date]:focus + label {
+  transform: translateY(-30px);
+  font-size: 12px;
+  color: #662483;
+  background: white;
+  padding: 0 5px;
+  left: 10px;
+}
+.modal-overlay .modal .registration-form .input-group input[type=date]:not(:valid):not(:focus) {
+  color: #999;
+}
+.modal-overlay .modal .registration-form .submit-btn {
+  width: 100%;
+  padding: 15px;
+  background: #662483;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.modal-overlay .modal .registration-form .submit-btn:hover {
+  background: #8a2be2;
+}
+.modal-overlay .modal .registration-form .login-link {
+  text-align: center;
+  margin-top: 20px;
+  color: #666;
+}
+.modal-overlay .modal .registration-form .login-link a {
+  color: #662483;
+  text-decoration: none;
+}
+.modal-overlay .modal .registration-form .login-link a:hover {
+  text-decoration: underline;
+}
+
+body.dark-theme .modal-overlay {
+  background: rgba(0, 0, 0, 0.7);
+}
+body.dark-theme .modal-overlay .modal {
+  background: #1e1e1e;
+  color: #ffffff;
+}
+body.dark-theme .modal-overlay .modal .modal-header {
+  border-bottom: 1px solid #333;
+}
+body.dark-theme .modal-overlay .modal .modal-header h2 {
+  color: #ffffff !important;
+}
+body.dark-theme .modal-overlay .modal .modal-header .modal-close {
+  color: #ffffff;
+}
+body.dark-theme .modal-overlay .modal .modal-header .modal-close:hover {
+  color: #ccc;
+}
+body.dark-theme .modal-overlay .modal .registration-form .input-group input, body.dark-theme .modal-overlay .modal .registration-form .input-group select {
+  background: #2d2d2d;
+  border-color: #662483;
+  color: #ffffff;
+}
+body.dark-theme .modal-overlay .modal .registration-form .input-group input:focus, body.dark-theme .modal-overlay .modal .registration-form .input-group select:focus {
+  border-color: #8a2be2;
+}
+body.dark-theme .modal-overlay .modal .registration-form .input-group input:focus + label, body.dark-theme .modal-overlay .modal .registration-form .input-group input:not(:placeholder-shown) + label, body.dark-theme .modal-overlay .modal .registration-form .input-group input:valid + label, body.dark-theme .modal-overlay .modal .registration-form .input-group select:focus + label, body.dark-theme .modal-overlay .modal .registration-form .input-group select:not(:placeholder-shown) + label, body.dark-theme .modal-overlay .modal .registration-form .input-group select:valid + label {
+  color: #8a2be2;
+  background: #1e1e1e;
+}
+body.dark-theme .modal-overlay .modal .registration-form .input-group select {
+  color: #ffffff;
+}
+body.dark-theme .modal-overlay .modal .registration-form .input-group select:invalid {
+  color: #999;
+}
+body.dark-theme .modal-overlay .modal .registration-form .input-group select:valid {
+  color: #ffffff;
+}
+body.dark-theme .modal-overlay .modal .registration-form .input-group:has(select)::after {
+  color: #8a2be2;
+}
+body.dark-theme .modal-overlay .modal .registration-form .input-group label {
+  color: #999;
+  background: #1e1e1e;
+}
+body.dark-theme .modal-overlay .modal .registration-form .input-group input[type=date] {
+  color: #ffffff;
+}
+body.dark-theme .modal-overlay .modal .registration-form .input-group input[type=date]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+body.dark-theme .modal-overlay .modal .registration-form .input-group input[type=date]:not(:valid):not(:focus) {
+  color: #999;
+}
+body.dark-theme .modal-overlay .modal .registration-form .submit-btn {
+  background: #662483;
+  color: white;
+}
+body.dark-theme .modal-overlay .modal .registration-form .submit-btn:hover {
+  background: #8a2be2;
+}
+body.dark-theme .modal-overlay .modal .registration-form .login-link {
+  color: #999;
+}
+body.dark-theme .modal-overlay .modal .registration-form .login-link a {
+  color: #8a2be2;
+}
+body.dark-theme .modal-overlay .modal .registration-form .login-link a:hover {
+  color: #8a2be2;
+}
+body.dark-theme .input-group.has-value label {
+  color: #8a2be2;
+  background: #1e1e1e;
+}
+
+@media (max-width: 768px) {
+  .modal-overlay .modal {
+    width: 100%;
+    max-width: 450px;
+  }
+  .modal-overlay .modal .modal-header {
+    padding: 20px 20px 15px;
+  }
+  .modal-overlay .modal .modal-header h2 {
+    font-size: 20px;
+  }
+  .modal-overlay .modal .registration-form {
+    padding: 20px;
+  }
+  .modal-overlay .modal .registration-form .input-group {
+    margin-bottom: 20px;
+  }
+  .modal-overlay .modal .registration-form .input-group input, .modal-overlay .modal .registration-form .input-group select {
+    padding: 12px;
+    font-size: 14px;
+  }
+  .modal-overlay .modal .registration-form .input-group label {
+    top: 12px;
+    left: 12px;
+    font-size: 14px;
+  }
+  .modal-overlay .modal .registration-form .input-group input:focus + label,
+  .modal-overlay .modal .registration-form .input-group input:not(:placeholder-shown) + label,
+  .modal-overlay .modal .registration-form .input-group input:valid + label,
+  .modal-overlay .modal .registration-form .input-group select:focus + label,
+  .modal-overlay .modal .registration-form .input-group select:valid + label {
+    transform: translateY(-25px);
+    font-size: 11px;
+  }
+  .modal-overlay .modal .registration-form .submit-btn {
+    padding: 12px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 480px) {
+  .modal-overlay {
+    padding: 15px;
+  }
+  .modal-overlay .modal {
+    max-width: 100%;
+    max-height: 85vh;
+  }
+  .modal-overlay .modal .modal-header {
+    padding: 15px;
+  }
+  .modal-overlay .modal .modal-header h2 {
+    font-size: 18px;
+  }
+  .modal-overlay .modal .registration-form {
+    padding: 15px;
+  }
+  .modal-overlay .modal .registration-form .input-group {
+    margin-bottom: 15px;
+  }
+  .modal-overlay .modal .registration-form .input-group input, .modal-overlay .modal .registration-form .input-group select {
+    padding: 10px;
+  }
+  .modal-overlay .modal .registration-form .input-group label {
+    top: 10px;
+    left: 10px;
+    font-size: 14px;
+  }
+  .modal-overlay .modal .registration-form .input-group input:focus + label,
+  .modal-overlay .modal .registration-form .input-group input:not(:placeholder-shown) + label,
+  .modal-overlay .modal .registration-form .input-group input:valid + label,
+  .modal-overlay .modal .registration-form .input-group select:focus + label,
+  .modal-overlay .modal .registration-form .input-group select:valid + label {
+    transform: translateY(-20px);
+    font-size: 10px;
+    left: 8px;
+  }
+}
+@media (max-width: 320px) {
+  .modal-overlay {
+    padding: 10px;
+  }
+  .modal-overlay .modal .modal-header {
+    padding: 12px;
+  }
+  .modal-overlay .modal .modal-header h2 {
+    font-size: 16px;
+  }
+  .modal-overlay .modal .modal-header .modal-close {
+    font-size: 24px;
+  }
+  .modal-overlay .modal .registration-form {
+    padding: 12px;
+  }
+  .modal-overlay .modal .registration-form .input-group {
+    margin-bottom: 12px;
+  }
+  .modal-overlay .modal .registration-form .input-group input, .modal-overlay .modal .registration-form .input-group select {
+    padding: 8px;
+  }
+}
+.input-group.has-value label {
+  transform: translateY(-30px);
+  font-size: 12px;
+  color: #662483;
+  background: white;
+  padding: 0 5px;
+  left: 10px;
+}
+@media (max-width: 768px) {
+  .input-group.has-value label {
+    transform: translateY(-25px);
+    font-size: 11px;
+  }
+}
+@media (max-width: 480px) {
+  .input-group.has-value label {
+    transform: translateY(-20px);
+    font-size: 10px;
+    left: 8px;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */

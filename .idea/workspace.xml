@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9e358e37-a609-4540-8eb5-fd8eccc9c2fd" name="Changes" comment="19.12.2025">
+      <change afterPath="$PROJECT_DIR$/src/images/ТВ.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/ТВ1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/events.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/components/_card-events.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_card-events.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/main.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/main.scss" afterDir="false" />
@@ -101,7 +100,8 @@
       <workItem from="1765977229270" duration="12649000" />
       <workItem from="1765990516693" duration="104000" />
       <workItem from="1765990732485" duration="1166000" />
-      <workItem from="1766004058245" duration="27364000" />
+      <workItem from="1766004058245" duration="27439000" />
+      <workItem from="1766143141636" duration="1428000" />
     </task>
     <task id="LOCAL-00001" summary="16.12.2025">
       <option name="closed" value="true" />
@@ -287,7 +287,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766140704652</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="19.12.2025">
+      <option name="closed" value="true" />
+      <created>1766142925920</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1766142925920</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

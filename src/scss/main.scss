@@ -140,6 +140,47 @@ body {
     border-radius: 20px;
     text-align: center;
     padding: 50px;
+
+    .inf {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      .HB{
+        background-color: rgba(102, 36, 131, 0.5);
+        color: #662483;
+        border-radius: 20px;
+        padding: 5px 8px;
+        width: 500px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto; /* Центрирование по горизонтали */
+      }
+    }
+
+    /* Адаптация для планшетов */
+    @media (max-width: 1024px) {
+      .inf {
+        gap: 20px;
+        flex-wrap: wrap; /* Разрешаем перенос элементов */
+      }
+    }
+
+    /* Адаптация для мобильных устройств */
+    @media (max-width: 768px) {
+      .inf {
+        flex-direction: column; /* Элементы становятся в колонку */
+        align-items: center; /* Центрируем элементы */
+        gap: 15px;
+      }
+    }
+
+    /* Адаптация для очень маленьких экранов */
+    @media (max-width: 480px) {
+      .inf {
+        gap: 10px;
+      }
+    }
     .text{
       font-size: 16px;
       text-align: center;

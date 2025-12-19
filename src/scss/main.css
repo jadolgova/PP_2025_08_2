@@ -776,6 +776,49 @@ body .info-block {
   text-align: center;
   padding: 50px;
 }
+body .info-block .inf {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+body .info-block .inf .HB {
+  background-color: rgba(102, 36, 131, 0.5);
+  color: #662483;
+  border-radius: 20px;
+  padding: 5px 8px;
+  width: 500px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto; /* Центрирование по горизонтали */
+}
+body .info-block {
+  /* Адаптация для планшетов */
+}
+@media (max-width: 1024px) {
+  body .info-block .inf {
+    gap: 20px;
+    flex-wrap: wrap; /* Разрешаем перенос элементов */
+  }
+}
+body .info-block {
+  /* Адаптация для мобильных устройств */
+}
+@media (max-width: 768px) {
+  body .info-block .inf {
+    flex-direction: column; /* Элементы становятся в колонку */
+    align-items: center; /* Центрируем элементы */
+    gap: 15px;
+  }
+}
+body .info-block {
+  /* Адаптация для очень маленьких экранов */
+}
+@media (max-width: 480px) {
+  body .info-block .inf {
+    gap: 10px;
+  }
+}
 body .info-block .text {
   font-size: 16px;
   text-align: center;

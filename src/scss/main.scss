@@ -96,12 +96,13 @@ body {
   }
   .banner{
     margin-top: 30px;
-    background-image: url('../images/фон1.webp');
+    background-image: url('../images/f-pr3.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 100%;
-    padding: 130px 180px;
+    //width: 100%;
+    height: 550px;
+    padding: 70px 180px 50px 180px;
     h3{
       margin-top: 10px;
 
@@ -112,31 +113,30 @@ body {
       gap: 30px;
     }
     @media (max-width: 1200px) {
-      padding: 100px 140px;
+      padding: 60px 140px 50px 140px;
       width: 100%;
+      .btn-bannner{
+        margin-top: 70px;
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+      }
     }
 
     @media (max-width: 768px) {
-      padding: 70px 80px;
-      width: 100%;
-      background-image: url('../images/f1.webp') !important;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+      padding: 80px 80px 100px 80px;
       text-align: center;
-      margin: 0;
-      .dark .your-class,
-      [data-theme="dark"] .your-class {
-        background-image: url('../images/f1.webp');
-      }
       .btn-bannner{
+        margin-top: 40px;
+        display: flex;
+        gap: 30px;
         flex-wrap: wrap;
         justify-content: center;
       }
     }
 
     @media (max-width: 480px) {
-      padding: 50px 25px;
+      padding: 50px 25px 30px 25px;
       width: 100%;
     }
   }
@@ -410,9 +410,9 @@ body.dark-theme .nav ul li a {
 }
 
 /* Баннер */
-body.dark-theme .banner {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/фон1.webp') !important;
-}
+//body.dark-theme .banner {
+//  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/f-pr2.webp') !important;
+//}
 
 /* Инфо-блок */
 body.dark-theme .info-block {

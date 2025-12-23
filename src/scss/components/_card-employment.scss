@@ -2,14 +2,14 @@
   background-color: white;
   border-radius: 20px;
   padding: 30px;
-  width: 270px;
+  width: 380px;
   height: 390px;
   display: grid;
   grid-template-rows: auto auto 1fr; /* 3 строки, последняя занимает все пространство */
   gap: 15px;
 
   svg{
-    height: 70%;
+    height: 60%;
   }
   .svg {
     display: grid;
@@ -18,18 +18,37 @@
 
   .title{
     font-weight: bold;
-    font-size: 16px;
+    font-size: 20px;
     text-align: center;
     align-self: center;
   }
 
 
   .text{
-    font-size: 16px;
+    font-size: 18px;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  @media (max-width: 950px) {
+    width: 100%;
+    height: auto;
+    svg{
+      height: 70%;
+      margin: 0;
+    }
+    .title{
+      font-size: 14px;
+    }
+    .text{
+      font-size: 14px;
+    }
+    .svg {
+      margin: 0;
+      height: 40px;
+    }
   }
   @media (max-width: 650px) {
     width: 100%;

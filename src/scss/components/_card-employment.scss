@@ -31,7 +31,15 @@
     align-items: center;
     justify-content: center;
   }
-
+  @media (max-width: 2190px) {
+    width: 370px;
+  }
+  @media (max-width: 1921px) {
+    width: 350px;
+  }
+  @media (max-width: 1790px) {
+    width: 320px;
+  }
   @media (max-width: 950px) {
     width: 100%;
     height: auto;
